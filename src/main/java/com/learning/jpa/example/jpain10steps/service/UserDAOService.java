@@ -21,4 +21,24 @@ public class UserDAOService {
 		//Close Transaction
 		return user.getId();
 	}
+	
+	
 }
+
+/*
+ * Spring Data JPA
+public class SomeEntityDAOService {
+	
+	@PersistenceContext
+	private EntityManager entitymanager;//Tracks those objects which are persistent
+	
+	public long insert(EntityUser user) {
+		//Open Transaction
+		entitymanager.persist(user); 
+		//Close Transaction
+		return user.getId();
+	}
+	
+	
+}
+*/

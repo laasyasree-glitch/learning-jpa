@@ -7,8 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.learning.jpa.example.jpain10steps.entity.User;
 import com.learning.jpa.example.jpain10steps.service.UserDAOService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.slf4j.*;
 
 @Component
 public class UserDOVserviceCommandLineRunner implements CommandLineRunner{
@@ -22,8 +21,7 @@ public class UserDOVserviceCommandLineRunner implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		User user = new User("Jack","Admin");
 		long insert = userDaoService.insert(user);
-		System.out.println(user);
-		log.info("New USer is created : "+user);
+		log.info("New USer is created : "+user+" "+insert );
 	}
 
 }
