@@ -9,6 +9,10 @@ import javax.persistence.Id;
 
 public class User {
 	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", role=" + role + "]";
+	}
 	@Id
 	@GeneratedValue
 	private long id;
